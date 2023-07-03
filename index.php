@@ -51,7 +51,29 @@
 </head>
 <body>
     <h1>
-        titolo hotel
+        Hotel diponibili:
     </h1>
+    <ul>
+        <?php foreach($hotels as $hotel) { ?>
+            <li>
+                <h2>
+                    <?php echo $hotel['name'] ?>
+                </h2>
+                <p>
+                    <?php echo $hotel['description']?>
+                </p>
+                <p>
+                    parking: <?php echo $hotel['parking']?>
+                </p>
+                <p>
+                    vote: <?php echo $hotel['vote']?>
+                </p>
+                <p>
+                    Distance to center: <?php echo $hotel['distance_to_center']?>
+                </p>
+                <hr>
+            </li>
+        <?php } ?>
+    </ul>
 </body>
 </html>
