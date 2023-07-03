@@ -57,19 +57,25 @@
         <?php foreach($hotels as $hotel) { ?>
             <li>
                 <h2>
-                    <?php echo $hotel['name'] ?>
+                    <?php echo $hotel['name']; ?>
                 </h2>
                 <p>
-                    <?php echo $hotel['description']?>
+                    <?php echo $hotel['description'];?>
                 </p>
                 <p>
-                    parking: <?php echo $hotel['parking']?>
+                    parking: <?php 
+                        if($hotel['parking'] === true){
+                            echo "Disponibile";
+                        }else{
+                            echo "Non disponibile";
+                        };
+                    ?>
                 </p>
                 <p>
-                    vote: <?php echo $hotel['vote']?>
+                    vote: <?php echo $hotel['vote'];?>
                 </p>
                 <p>
-                    Distance to center: <?php echo $hotel['distance_to_center']?>
+                    Distance to center: <?php echo $hotel['distance_to_center'];?>
                 </p>
                 <hr>
             </li>
