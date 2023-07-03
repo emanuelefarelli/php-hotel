@@ -47,23 +47,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- BOOTSTRAP 5.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+
     <title>hotel php</title>
+
+    <style>
+        ul{
+            list-style-type: none;
+        }
+    </style>
+
 </head>
 <body>
-    <h1>
+    <h1 class="py-5 text-center bg-primary text-light">
         Hotel diponibili:
     </h1>
     <ul>
         <?php foreach($hotels as $hotel) { ?>
-            <li>
-                <h2>
+            <li class="text-center">
+                <h2 class="fs-1">
                     <?php echo $hotel['name']; ?>
                 </h2>
                 <p>
                     <?php echo $hotel['description'];?>
                 </p>
                 <p>
-                    parking: <?php 
+                    Parking: <?php 
                         if($hotel['parking'] === true){
                             echo "Disponibile";
                         }else{
@@ -72,7 +84,7 @@
                     ?>
                 </p>
                 <p>
-                    vote: <?php echo $hotel['vote'];?>
+                    Vote: <?php echo $hotel['vote'];?>
                 </p>
                 <p>
                     Distance to center: <?php echo $hotel['distance_to_center'];?>
